@@ -205,6 +205,7 @@ ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 
 # Surface Flinger
+debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=0
 debug.sf.high_fps.early.app.duration=11000000
 debug.sf.high_fps.early.sf.duration=11000000
