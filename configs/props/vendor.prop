@@ -5,6 +5,7 @@ persist.vendor.audiohal.aurisys.pcm_dump_on=0
 persist.vendor.audiohal.p2w_dump_on=0
 persist.vendor.audiohal.pcm_mixer_dump_on=0
 ro.audio.monitorRotation=true
+ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 ro.vendor.audio.spk.stereo=true
 ro.vendor.audio.us.proximity=true
