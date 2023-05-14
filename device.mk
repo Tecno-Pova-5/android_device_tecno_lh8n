@@ -146,7 +146,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayEverpal \
     SettingsOverlayEverpal \
-    SystemUIOverlayEverpal
+    SystemUIOverlayEverpal \
+    WiFiOverlayEverpal
 
 # Permissions
 PRODUCT_COPY_FILES += \
