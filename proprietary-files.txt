@@ -847,7 +847,6 @@ vendor/lib64/libmiStereoFactoryRemapLib.so
 vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmibokeh_mt6873.so
-vendor/lib64/libmisoundcrossfade.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libmsnr.so
 vendor/lib64/libmtkcam.atmseventmgr.so
