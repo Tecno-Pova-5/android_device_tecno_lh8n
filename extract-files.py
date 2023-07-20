@@ -69,6 +69,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('mediatek', 'mediatek-64b'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2'),
+    'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
