@@ -69,6 +69,9 @@ on post-fs-data
     chown system system /sys/class/power_supply/battery/charging_call_state
     chmod 0660 /sys/class/power_supply/battery/charging_call_state
 
+on boot
+    stop console
+
 # Touch
 on property:sys.tp.grip_enable=0
     write /proc/nvt_edge_reject_switch 1
