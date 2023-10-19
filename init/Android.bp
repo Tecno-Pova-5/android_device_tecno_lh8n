@@ -11,6 +11,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.batterysecret.rc",
+    src: "init.batterysecret.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.connectivity.rc",
     src: "init.connectivity.rc",
     relative_install_path: "init/hw",
