@@ -213,6 +213,7 @@ debug.sf.high_fps.earlyGl.sf.duration=11000000
 debug.sf.high_fps.hwc.min.duration=17000000
 debug.sf.high_fps.late.app.duration=11000000
 debug.sf.high_fps.late.sf.duration=11000000
+debug.sf.treat_170m_as_sRGB=1
 ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
