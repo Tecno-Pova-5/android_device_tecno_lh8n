@@ -459,6 +459,9 @@
     <!-- Bytes that the PinnerService will pin for Home app -->
     <integer name="config_pinnerHomePinBytes">6291456</integer>
 
+    <!-- Bytes that the PinnerService will pin for WebView -->
+    <integer name="config_pinnerWebviewPinBytes">20971520</integer>
+
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
 
