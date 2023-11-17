@@ -279,12 +279,14 @@ vendor/bin/batterysecret
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/firmware/BT_FW.cfg
-vendor/firmware/soc2_2_ram_bt_1_1_hdr.bin
-vendor/firmware/soc2_2_ram_bt_1a_1_hdr.bin
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
+
+# Bluetooth - from a13xins-user 14 UP1A.231005.007 M136BXXSBDYD3 release-keys
+vendor/firmware/soc2_2_ram_bt_1_1_hdr.bin|bee1e31d2f31c6431905cbd76b7300a033d762ab
+vendor/firmware/soc2_2_ram_bt_1a_1_hdr.bin|95ec2e59a13d8bcc8561adacfb3fb734b98d4d80
 
 # Camera
 vendor/bin/hw/camerahalserver
