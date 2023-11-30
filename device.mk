@@ -147,6 +147,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayEverpal \
     SettingsOverlayEverpal \
     SystemUIOverlayEverpal \
+    TetheringOverlayEverpal \
     WiFiOverlayEverpal
 
 # Permissions
