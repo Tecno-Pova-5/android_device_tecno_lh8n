@@ -4,3 +4,6 @@ set_prop(vendor_init, vendor_mtk_audio_prop)
 
 # Camera
 set_prop(vendor_init, vendor_camera_prop)
+
+# PQ
+set_prop(vendor_init, vendor_mtk_pq_prop)
