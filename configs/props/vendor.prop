@@ -66,6 +66,9 @@ ro.netflix.bsp_rev=MTK6833-32817-1
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Fingerprint
 persist.vendor.fingerprint.sensor_location=1080|955|110|local:0
 persist.vendor.fingerprint.sensor_modules=fpc,goodix
