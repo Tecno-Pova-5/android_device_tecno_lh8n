@@ -60,6 +60,9 @@ vendor.mtk.camera.app.fd.video=1
 # ConsumerIR
 ro.hardware.consumerir=common
 
+# DRM
+ro.netflix.bsp_rev=MTK6833-32817-1
+
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
