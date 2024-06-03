@@ -142,6 +142,7 @@ ro.hardware.kmsetkey=beanpod
 
 # LMK
 ro.lmk.filecache_min_kb=153600
+ro.lmk.kill_heaviest_task=true
 
 # Media
 debug.mediatek.disp_decompress=1
