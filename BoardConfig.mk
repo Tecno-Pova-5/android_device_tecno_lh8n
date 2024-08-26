@@ -58,6 +58,9 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Enable 64-bit for non-zygote.
+ZYGOTE_FORCE_64 := true
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6833
 TARGET_KERNEL_CONFIG := everpal_defconfig
