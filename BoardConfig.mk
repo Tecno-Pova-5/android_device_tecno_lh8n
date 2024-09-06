@@ -61,6 +61,9 @@ TARGET_SCREEN_DENSITY := 440
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
 
+# Include 64-bit drmserver to support 64-bit only devices
+TARGET_DYNAMIC_64_32_DRMSERVER := true
+
 # Include 64-bit mediaserver to support 64-bit only devices
 TARGET_DYNAMIC_64_32_MEDIASERVER := true
 
