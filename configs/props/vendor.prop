@@ -85,6 +85,7 @@ ro.vendor.mtk_gps_support=1
 ro.vendor.mtk_log_hide_gps=1
 
 # Graphics
+debug.graphics.game_default_frame_rate.disabled=true
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
 ro.hardware.egl=meow
