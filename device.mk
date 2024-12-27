@@ -115,6 +115,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6833.power.rc \
     init.mt6833.rc \
+    init.mt6833.thermal.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6833.rc
@@ -193,6 +194,13 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
     hardware/xiaomi
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.mediatek
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # USB
 PRODUCT_PACKAGES += \

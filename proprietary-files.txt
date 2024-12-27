@@ -557,6 +557,23 @@ vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
+# Thermal
+vendor/bin/mi_thermald
+vendor/etc/thermal-arvr.conf
+vendor/etc/thermal-camera.conf
+vendor/etc/thermal-chg-only.conf
+vendor/etc/thermal-class0.conf
+vendor/etc/thermal-map.conf
+vendor/etc/thermal-mgame.conf
+vendor/etc/thermal-navigation.conf
+vendor/etc/thermal-nolimits.conf
+vendor/etc/thermal-normal.conf
+vendor/etc/thermal-phone.conf
+vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-video.conf
+vendor/etc/thermal-youtube.conf
+vendor/etc/thermald-devices.conf
+
 # Touchscreen
 vendor/etc/firmware/novatek_ts_ct_fw.bin:vendor/firmware/novatek_ts_ct_fw.bin
 vendor/etc/firmware/novatek_ts_ct_mp.bin:vendor/firmware/novatek_ts_ct_mp.bin

@@ -1,5 +1,6 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6833.power.rc
+import /vendor/etc/init/hw/init.mt6833.thermal.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 
@@ -98,8 +99,6 @@ on charger
     chown system system /sys/class/leds/green/brightness
 
     start vendor.light-default
-
-    start mi_thermald
 
     # Stop bootprof
     write /proc/bootprof "0"
@@ -686,11 +685,6 @@ on post-fs-data
 
     chmod 0666 /dev/exm0
 
-	# Thermal
-	mkdir /data/vendor/.tp/ 0775 system system
-	mkdir /data/vendor/thermal 0771 root system
-	mkdir /data/vendor/thermal/config 0771 root system
-
     # MCUPM log
     chmod 0620 /sys/class/misc/mcupm/mcupm_mobile_log
     chown root system /sys/class/misc/mcupm/mcupm_mobile_log
@@ -963,15 +957,5 @@ on property:persist.vendor.mediatek.fg.log.enable=1
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# FPSGO FBT Game
-on boot
-    chown system system /sys/class/thermal/thermal_message/sconfig
-
 on init
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
-
-service mi_thermald /system/vendor/bin/mi_thermald
-    class main
-    user root
-    group system
-    seclabel u:r:mi_thermald:s0
