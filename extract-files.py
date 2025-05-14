@@ -80,6 +80,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('start', 'enable'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2'),
+    'vendor/lib/hw/audio.primary.mt6833.so' : blob_fixup()
+        .replace_needed('libalsautils.so', 'libalsautils.mt6833.so'),
     'vendor/lib/libvcodec_oal.so': blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
