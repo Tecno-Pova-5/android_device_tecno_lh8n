@@ -206,15 +206,13 @@ telephony.active_modems.max_count=2
 
 # Surface Flinger
 debug.sf.disable_client_composition_cache=1
+debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=0
-debug.sf.high_fps.early.app.duration=11000000
-debug.sf.high_fps.early.sf.duration=11000000
-debug.sf.high_fps.earlyGl.app.duration=11000000
-debug.sf.high_fps.earlyGl.sf.duration=11000000
-debug.sf.high_fps.hwc.min.duration=17000000
-debug.sf.high_fps.late.app.duration=11000000
-debug.sf.high_fps.late.sf.duration=11000000
+debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
+debug.sf.high_fps_early_phase_offset_ns=-5000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
 debug.sf.treat_170m_as_sRGB=1
 ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
