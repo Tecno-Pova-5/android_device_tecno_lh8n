@@ -51,6 +51,9 @@ on early-boot
     # midi function
     mkdir /config/usb_gadget/g1/functions/midi.gs5
 
+    # mass_storage
+    mkdir /config/usb_gadget/g1/functions/mass_storage.usb0
+
     # chown file/folder permission
     chown system system /config/usb_gadget/
     chown system system /config/usb_gadget/g1
