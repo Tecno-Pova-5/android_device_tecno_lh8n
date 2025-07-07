@@ -43,6 +43,11 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6833
+TARGET_KERNEL_CONFIG := everpal_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6833
 
