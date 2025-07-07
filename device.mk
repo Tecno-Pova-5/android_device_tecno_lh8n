@@ -6,6 +6,9 @@
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/everpal/everpal-vendor.mk)
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
