@@ -5,6 +5,18 @@
 
 DEVICE_PATH := device/xiaomi/everpal
 
+# A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    system_ext \
+    product \
+    vendor \
+    vendor_dlkm \
+    odm
+
+BOARD_USES_RECOVERY_AS_BOOT := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
