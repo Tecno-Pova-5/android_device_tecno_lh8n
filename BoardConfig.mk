@@ -17,5 +17,12 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := everpal
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6833
+
 # Inherit the proprietary files
 include vendor/xiaomi/everpal/BoardConfigVendor.mk
