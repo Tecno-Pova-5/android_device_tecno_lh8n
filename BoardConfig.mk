@@ -80,5 +80,10 @@ TARGET_COPY_OUT_ODM := odm
 # Platform
 TARGET_BOARD_PLATFORM := mt6833
 
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
 # Inherit the proprietary files
 include vendor/xiaomi/everpal/BoardConfigVendor.mk
