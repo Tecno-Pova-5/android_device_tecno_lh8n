@@ -52,6 +52,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
