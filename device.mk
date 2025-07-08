@@ -61,7 +61,14 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6833 \
-    fstab.mt6833.ramdisk
+    fstab.mt6833.ramdisk \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6833.power.rc \
+    init.mt6833.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6833.rc
 
 # Light
 PRODUCT_PACKAGES += \
