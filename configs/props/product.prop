@@ -1,0 +1,2 @@
+# Variant properties
+import /product/etc/props/${ro.boot.board_id}.prop
