@@ -58,6 +58,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek-recovery \
     charger_res_images_vendor
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.mt6833 \
+    fstab.mt6833.ramdisk
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
