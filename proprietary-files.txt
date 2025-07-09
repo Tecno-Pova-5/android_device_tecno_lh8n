@@ -271,6 +271,14 @@ vendor/etc/audio_param_global/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/sixth_param.txt
 vendor/etc/aurisys_param/sixth_param_voip.txt
 
+# Connectivity
+vendor/bin/wmt_launcher
+vendor/bin/wmt_loader
+vendor/firmware/WMT_SOC.cfg
+vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin
+vendor/firmware/soc2_2_ram_mcu_1a_1_hdr.bin
+vendor/firmware/txpowerctrl.cfg
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
