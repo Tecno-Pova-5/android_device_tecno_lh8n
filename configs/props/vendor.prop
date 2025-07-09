@@ -1,3 +1,12 @@
+# Audio
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+ro.config.vc_call_vol_steps=11
+ro.vendor.audio.spk.stereo=true
+ro.vendor.audio.us.proximity=true
+ro.vendor.audio.vocal.support=true
+vendor.audiohal.telephonytx.type=2
+
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
