@@ -7,6 +7,10 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 vendor.audiohal.telephonytx.type=2
 
+# Bluetooth
+ro.vendor.mtk.bt_sap_enable=true
+vendor.bluetooth.ldac.abr=true
+
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
