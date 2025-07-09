@@ -1,6 +1,9 @@
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
+# Gatekeeper
+ro.hardware.gatekeeper=beanpod
+
 # Graphics
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1

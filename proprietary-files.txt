@@ -1,5 +1,8 @@
 # Unpinned blobs from opal-user 13 TP1A.220624.014 V816.0.1.0.TGLMIXM release-keys
 
+# Gatekeeper
+vendor/lib64/hw/gatekeeper.beanpod.so
+
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
