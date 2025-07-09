@@ -381,6 +381,18 @@ vendor/lib64/libnvram_sec.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
+# Touchscreen
+vendor/etc/firmware/novatek_ts_ct_fw.bin:vendor/firmware/novatek_ts_ct_fw.bin
+vendor/etc/firmware/novatek_ts_ct_mp.bin:vendor/firmware/novatek_ts_ct_mp.bin
+vendor/etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin
+vendor/etc/firmware/novatek_ts_mp.bin:vendor/firmware/novatek_ts_mp.bin
+
+# Touchscreen (Recovery)
+vendor/etc/firmware/novatek_ts_ct_fw.bin:recovery/root/vendor/firmware/novatek_ts_ct_fw.bin
+vendor/etc/firmware/novatek_ts_ct_mp.bin:recovery/root/vendor/firmware/novatek_ts_ct_mp.bin
+vendor/etc/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin
+vendor/etc/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
+
 # Trusted Execution Environment (TEE)
 vendor/bin/teei_daemon
 vendor/etc/init/microtrust.rc
