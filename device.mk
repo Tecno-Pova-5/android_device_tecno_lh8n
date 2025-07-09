@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6833.rc
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.km41.xml
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
