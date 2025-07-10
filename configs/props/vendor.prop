@@ -17,6 +17,11 @@ ro.hardware.consumerir=common
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
+# Fingerprint
+persist.vendor.fingerprint.sensor_location=1080|955|110|local:0
+persist.vendor.fingerprint.sensor_modules=fpc,goodix
+persist.vendor.fingerprint.type=side
+
 # Gatekeeper
 ro.hardware.gatekeeper=beanpod
 
