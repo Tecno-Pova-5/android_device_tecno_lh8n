@@ -290,6 +290,9 @@ vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin
 vendor/firmware/soc2_2_ram_mcu_1a_1_hdr.bin
 vendor/firmware/txpowerctrl.cfg
 
+# ConsumerIR
+vendor/lib64/hw/consumerir.common.so
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc

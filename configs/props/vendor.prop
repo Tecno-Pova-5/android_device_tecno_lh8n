@@ -11,6 +11,9 @@ vendor.audiohal.telephonytx.type=2
 ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
 
+# ConsumerIR
+ro.hardware.consumerir=common
+
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
