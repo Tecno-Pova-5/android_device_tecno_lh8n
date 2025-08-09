@@ -10,14 +10,6 @@ import /vendor/etc/init/hw/init.modem.rc
 
 # *** DO NOT import the new rc file after this line ***
 
-on early-init
-    write /proc/bootprof "INIT:early-init"
-    # boot perf. tune
-    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
-    write /sys/devices/platform/boot_dramboost/dramboost/dramboost 1
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-
 on init
     write /proc/bootprof "INIT:init"
 
@@ -34,13 +26,6 @@ on init
 
     # ExtB HONGMI-84715,jiiyanan.wt,Add,20210611,network configuration optimization
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
-
-    # update cpus for cpuset cgroup
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/foreground/boost/cpus 0-7
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-5
-    write /dev/cpuset/top-app/cpus 0-7
 
 on late-init
     write /proc/bootprof "INIT:late-init"
@@ -62,10 +47,6 @@ on property:odm.display_hbm=3
     write /sys/class/leds/lcd-backlight/hbm 3
 
 on charger
-    # Set CPU/Dram init parameter
-    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
-    write /sys/devices/platform/boot_dramboost/dramboost/dramboost 0
-
     chmod 0660 /dev/spm
     chown system system /dev/spm
     start spm_script
@@ -661,10 +642,6 @@ on post-fs-data
 
     chmod 0664 /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
     chown media media /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
-
-    # mtk_sched
-    chmod 0660 /dev/mtk_sched
-    chown system media /dev/mtk_sched
 
     # BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
     chmod 0660 /dev/ebc

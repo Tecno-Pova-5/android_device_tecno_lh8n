@@ -179,6 +179,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    libmtkperf_client_vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Properties
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/system,$(TARGET_COPY_OUT_SYSTEM)/etc/props) \
@@ -205,7 +214,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
     hardware/xiaomi
 
 # Thermal
