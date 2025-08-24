@@ -926,7 +926,7 @@ vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/etc/camera/LDC_packdata_xiaomi.dat|77be541ddc2a7008080cb72828e9a441ff5ea4f3
 vendor/etc/camera/hdrcheckerparamsettings.yml|2bb45fa56e2c8c1b271c1092bb5f7734b4d48647
 vendor/etc/camera/libalfpc_tuning.bin|d562d957c22a9fb915f014d9d1fcbff8a1b51ec9
-vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so|25bbeb5768ce10f663c1c9e43e37ce3b2f93e29a
+vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so|25bbeb5768ce10f663c1c9e43e37ce3b2f93e29a|5b6104e4c01579bc68de2157c6f980c78a46c57c
 vendor/lib64/imx355ofilm_mipi_raw_IdxMgr.so|bf3b811010949ace0edbf83e3d89bad13289dae3
 vendor/lib64/imx355ofilm_mipi_raw_tuning.so|0b798d635267e98f5c35936281e842835ccc2e68
 vendor/lib64/imx355sunny_mipi_raw_IdxMgr.so|ffe86333b2bdb3acdf4ce6087be344d11185fb36
