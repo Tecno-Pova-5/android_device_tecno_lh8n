@@ -80,6 +80,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('start', 'enable'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2'),
+    'vendor/lib/libvcodec_oal.so': blob_fixup()
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
     ('vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so','vendor/lib64/libmtkcam_stdutils.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so': blob_fixup()
