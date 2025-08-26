@@ -981,9 +981,11 @@ vendor/lib64/s5kjn1sunny_mipi_raw_tuning.so|a56ce29ecf0a8e20cd6b5825ee9fbe63f382
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/firmware/WMT_SOC.cfg
-vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin
-vendor/firmware/soc2_2_ram_mcu_1a_1_hdr.bin
 vendor/firmware/txpowerctrl.cfg
+
+# Connectivity - from a13xins-user 14 UP1A.231005.007 M136BXXSBDYD3 release-keys
+vendor/firmware/soc2_2_ram_mcu_1_1_hdr.bin|d01408da3e2a0529dc4161800a0808e9ba1dfddc
+vendor/firmware/soc2_2_ram_mcu_1a_1_hdr.bin|bc98f4d18c4e483ad9f22a364cc905be70d402fa
 
 # ConsumerIR
 vendor/lib64/hw/consumerir.common.so
@@ -1352,8 +1354,10 @@ vendor/firmware/aw8697_rtp_1.bin
 # WiFi
 vendor/bin/wlan_assistant
 vendor/etc/init/wlan_assistant.rc
-vendor/firmware/WIFI_RAM_CODE_soc2_2_1_1.bin
-vendor/firmware/WIFI_RAM_CODE_soc2_2_1a_1.bin
-vendor/firmware/soc2_2_ram_wifi_1_1_hdr.bin
-vendor/firmware/soc2_2_ram_wifi_1a_1_hdr.bin
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+
+# WiFi - from a13xins-user 14 UP1A.231005.007 M136BXXSBDYD3 release-keys
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1_1.bin|80a9df9e496e4d55d91733f97941883a2eaf8c55
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1a_1.bin|9fa98689eea3bd6ab91e7faf82ef9fb74b010de1
+vendor/firmware/soc2_2_ram_wifi_1_1_hdr.bin|dfb66af5b3a275ea49fb7c3446757a8fb0384c48
+vendor/firmware/soc2_2_ram_wifi_1a_1_hdr.bin|fa3f34c6f6bba459f68454bf276f9e37489824a1
