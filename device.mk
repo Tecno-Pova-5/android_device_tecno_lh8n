@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
     init.mt6833.thermal.rc \
     init.mt6833.usb.rc \
     init.project.rc \
+    init.recovery.mt6833.rc \
     init.sensor_2_0.rc \
     ueventd.mt6833.rc
 
