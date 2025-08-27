@@ -137,7 +137,8 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayEverpal
+    FrameworksResOverlayEverpal \
+    SystemUIOverlayEverpal
 
 # Permissions
 PRODUCT_COPY_FILES += \

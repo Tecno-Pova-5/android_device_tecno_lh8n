@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "SystemUIOverlayEverpal",
+    resource_dirs: ["res"],
+    device_specific: true,
+}
