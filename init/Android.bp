@@ -81,6 +81,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.stnfc.rc",
+    src: "init.stnfc.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.mt6833.rc",
     filename: "ueventd.rc",
     src: "ueventd.mt6833.rc",

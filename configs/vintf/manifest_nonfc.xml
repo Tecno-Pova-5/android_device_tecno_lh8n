@@ -1,0 +1,6 @@
+<manifest version="9.0" type="device" target-level="6">
+    <hal override="true">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+    </hal>
+</manifest>

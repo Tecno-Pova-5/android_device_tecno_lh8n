@@ -75,6 +75,15 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6833
 TARGET_KERNEL_CONFIG := everpal_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 
+# NFC
+ODM_MANIFEST_SKUS += nfc nonfc
+
+ODM_MANIFEST_NFC_FILES += \
+    hardware/interfaces/compatibility_matrices/manifest.empty.xml
+
+ODM_MANIFEST_NONFC_FILES += \
+    $(DEVICE_PATH)/configs/vintf/manifest_nonfc.xml
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728

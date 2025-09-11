@@ -1,0 +1,13 @@
+service vendor.st_nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.st
+    class hal
+    user nfc
+    group nfc
+    override
+    disabled
+
+service nfc_hal_service /system/bin/true
+    disabled
+    override
+
+on property:ro.boot.product.hardware.sku=nfc
+    enable vendor.st_nfc_hal_service

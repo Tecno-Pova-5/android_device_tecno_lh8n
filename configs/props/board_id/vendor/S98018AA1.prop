@@ -17,5 +17,8 @@ ro.product.vendor.marketname=Redmi Note 11S 5G
 ro.product.model=22031116BG
 ro.product.vendor.model=22031116BG
 
+# NFC
+ro.boot.product.hardware.sku=nfc
+
 # Mod Device
 ro.product.mod_device=opal_global

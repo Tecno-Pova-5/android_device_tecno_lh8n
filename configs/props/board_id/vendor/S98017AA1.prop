@@ -21,5 +21,8 @@ ro.product.vendor.marketname=POCO M4 Pro 5G
 ro.product.model=21091116AG
 ro.product.vendor.model=21091116AG
 
+# NFC
+ro.boot.product.hardware.sku=nfc
+
 # Mod Device
 ro.product.mod_device=evergreen_global
