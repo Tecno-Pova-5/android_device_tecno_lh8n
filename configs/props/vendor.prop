@@ -158,6 +158,9 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
+# Platform
+ro.vendor.mediatek.platform=MT6833
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.factory.GB2312=yes
