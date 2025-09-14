@@ -65,6 +65,9 @@ PRODUCT_PACKAGES += \
     audio.usb.default:32 \
     audio_policy.stub:32
 
+PRODUCT_PACKAGES += \
+    audio_param_global_symlink
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
