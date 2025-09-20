@@ -75,6 +75,9 @@ ro.netflix.bsp_rev=MTK6833-32817-1
 # Device specific properties
 import /vendor/etc/props/${ro.boot.board_id}.prop
 
+# FM Radio
+persist.vendor.connsys.fm_chipid=mt6631_6635
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
