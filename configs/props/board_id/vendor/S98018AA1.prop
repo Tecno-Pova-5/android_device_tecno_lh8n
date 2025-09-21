@@ -19,6 +19,3 @@ ro.product.vendor.model=22031116BG
 
 # NFC
 ro.boot.product.hardware.sku=nfc
-
-# Mod Device
-ro.product.mod_device=opal_global

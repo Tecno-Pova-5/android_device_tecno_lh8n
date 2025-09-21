@@ -13,3 +13,6 @@ ro.product.system_ext.marketname=Redmi Note 11 5G
 
 # Build Info (Model)
 ro.product.system_ext.model=21091116AC
+
+# Mod Device
+ro.product.mod_device=evergo_cn_global
