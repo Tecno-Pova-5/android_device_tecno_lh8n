@@ -137,6 +137,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 # SEPolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2024-02-01
