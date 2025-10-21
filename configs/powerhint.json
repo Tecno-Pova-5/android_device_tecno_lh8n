@@ -136,7 +136,44 @@
       "Path": "/proc/perfmgr/boost_ctrl/dram_ctrl/ddr",
       "Values": [
         "1",
+        "0",
         "-1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "UclampMin",
+      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_uclamp_min",
+      "Values": [
+        "100",
+        "75",
+        "50",
+        "25",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "FGUclampMin",
+      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_uclamp_min",
+      "Values": [
+        "100",
+        "75",
+        "50",
+        "25",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMin",
+      "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_uclamp_min",
+      "Values": [
+        "100",
+        "75",
+        "50",
+        "25",
+        "0"
       ],
       "ResetOnInit": true
     },
@@ -233,6 +270,24 @@
       "Node": "DRAMOppMin",
       "Duration": 3000,
       "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMin",
+      "Duration": 3000,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "FGUclampMin",
+      "Duration": 3000,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UclampMin",
+      "Duration": 3000,
+      "Value": "100"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
