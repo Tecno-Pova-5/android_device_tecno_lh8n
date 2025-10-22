@@ -13,5 +13,9 @@ allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
 # Allow hal_sensors_default to read/write to sensor device
 allow hal_sensors_default sensor_device:chr_file rw_file_perms;
 
+# Allow hal_sensors_default to access to the backlight driver
+allow hal_sensors_default sysfs_leds:dir search;
+allow hal_sensors_default sysfs_leds:file rw_file_perms;
+
 allow hal_sensors_default device:dir r_dir_perms;
 allow hal_sensors_default hidraw_device:chr_file rw_file_perms;
