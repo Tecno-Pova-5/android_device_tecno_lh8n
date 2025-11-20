@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6833.rc \
     init.sensor_2_0.rc \
     init.stnfc.rc \
-    ueventd.mt6833.rc
+    ueventd.mt6833.rc    
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -246,6 +246,21 @@ include $(LOCAL_PATH)/configs/props/vendor_logtag.mk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge:64 \
+    android.hardware.sensors@1.0.vendor:64 \
+    android.hardware.sensors@2.1.vendor:64 \
+    android.frameworks.sensorservice@1.0:64 \
+    android.frameworks.sensorservice@1.0.vendor:64 \
+    android.hardware.sensors@2.1-service.multihal \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor:64
+
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal:64
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
