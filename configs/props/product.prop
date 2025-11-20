@@ -16,5 +16,3 @@ ro.fm.seek_lev=4
 ro.fm.seek_space=1
 ro.fm.short_ana_sup=1
 
-# Variant properties
-import /product/etc/props/${ro.boot.board_id}.prop

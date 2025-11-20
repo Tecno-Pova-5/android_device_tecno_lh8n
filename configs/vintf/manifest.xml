@@ -1,4 +1,4 @@
-<manifest version="9.0" type="device" target-level="6">
+<manifest version="4.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -79,13 +79,6 @@
         <fqname>@1.1::IOffloadControl/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.fingerprints.extension</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IFingerprintEngineering/default</fqname>
-        <fqname>@1.0::IFingerprintNavigation/default</fqname>
-        <fqname>@1.0::IFingerprintSensorTest/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.goodix.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
@@ -156,11 +149,26 @@
     <hal format="hidl">
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
-        <fqname>@2.13::IPictureQuality/default</fqname>
+        <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IVideoTelephony/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.keymaster_attestation</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IKeymasterDevice/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::ITee/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.trustonic.tee.tui</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ITui/default</fqname>
     </hal>
 </manifest>
