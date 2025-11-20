@@ -20,6 +20,13 @@ $(call inherit-product, vendor/mediatek/ims/ims.mk)
 # Inherit the proprietary files
 $(call inherit-product, vendor/tecno/lh8n/lh8n-vendor.mk)
 
+## Inherit from GKI stuffs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+## Inherit from virtual A/B, most specific first
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+
 # A/B
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.default_recovery \
