@@ -111,15 +111,6 @@ BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/vendor/*.ko)
 TARGET_PREBUILT_DTB := $(KERNEL_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/prebuilt/dtbo.img
 
-# NFC
-ODM_MANIFEST_SKUS += nfc nonfc
-
-ODM_MANIFEST_NFC_FILES += \
-    hardware/interfaces/compatibility_matrices/manifest.empty.xml
-
-ODM_MANIFEST_NONFC_FILES += \
-    $(DEVICE_PATH)/configs/vintf/manifest_nonfc.xml
-
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 41943040
