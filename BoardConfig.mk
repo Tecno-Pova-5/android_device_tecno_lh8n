@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/everpal
+DEVICE_PATH := device/tecno/lh8n
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -33,7 +33,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a55
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := evergo,evergreen,everpal,opal
+TARGET_OTA_ASSERT_DEVICE := lh8n
 
 # Boot Image
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -55,7 +55,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := everpal
+TARGET_BOOTLOADER_BOARD_NAME := lh8n
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -71,9 +71,8 @@ TARGET_DYNAMIC_64_32_DRMSERVER := true
 TARGET_DYNAMIC_64_32_MEDIASERVER := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6833
-TARGET_KERNEL_CONFIG := everpal_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+TARGET_KERNEL_SOURCE := device/tecno/lh8n-kernal
+BOARD_KERNEL_IMAGE_NAME := Image
 
 # NFC
 ODM_MANIFEST_SKUS += nfc nonfc
@@ -89,16 +88,16 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_USES_METADATA_PARTITION := true
 
-BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
+BOARD_SUPER_PARTITION_GROUPS := MTK_dynamic_partitions
 BOARD_SUPER_PARTITION_SIZE := 9126805504
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+BOARD_MTK_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system \
     system_ext \
     product \
     vendor \
     vendor_dlkm \
     odm
-BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200
+BOARD_MTK_DYNAMIC_PARTITIONS_SIZE := 9122611200
 
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -168,8 +167,7 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 # Vintf
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml 
 
 # WiFi
 WPA_SUPPLICANT_VERSION := VER_0_8_X
@@ -186,4 +184,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit the proprietary files
-include vendor/xiaomi/everpal/BoardConfigVendor.mk
+include vendor/tecno/lh8n/BoardConfigVendor.mk

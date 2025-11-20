@@ -28,8 +28,7 @@ from extract_utils.utils import (
 
 namespace_imports = [
     'hardware/mediatek',
-    'hardware/mediatek/libmtkperf_client',
-    'hardware/xiaomi'
+    'hardware/mediatek/libmtkperf_client'
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -113,8 +112,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'everpal',
-    'xiaomi',
+    'lh8n',
+    'tecno',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
