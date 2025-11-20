@@ -127,7 +127,9 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6833 \
-    fstab.mt6833.ramdisk \
+    fstab.mt6833.vendor_ramdisk \
+    fstab.emmc \
+    fstab.emmc.vendor_ramdisk \
     init.batterysecret.rc \
     init.connectivity.rc \
     init.modem.rc \
