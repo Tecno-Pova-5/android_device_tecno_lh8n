@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+KERNEL_PATH := device/tecno/lh8n-kernel
+
 # Dalvik VM Configuration
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -90,6 +92,10 @@ PRODUCT_PACKAGES += \
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# DTB
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PATH)/prebuilt/dtb.img:$(TARGET_OUT)/dtb.img
 
 # FM Radio
 PRODUCT_PACKAGES += \
