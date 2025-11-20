@@ -1,10 +1,18 @@
+import /vendor/etc/init/hw/init.mtkgki.rc
+
+# MTK project .rc configure
+
+on early-init
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
+
 on init
     mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
     mkdir /storage/usbotg 0700 root root
     write /sys/module/musb_hdrc/parameters/mu3d_force_on 1
 
 on post-fs-data
-    # Camera
+
+#Camera
     chmod 0660 /dev/MAINAF
     chown system camera /dev/MAINAF
 
@@ -26,56 +34,84 @@ on post-fs-data
     chmod 0660 /dev/BU64745GWZAF
     chown system camera /dev/BU64745GWZAF
 
-    # XIAOMI_DUAL_CAM_BIN
-    mkdir /mnt/vendor/persist/camera/ 0777 system camera
-    mkdir /data/vendor/camera/ 0777 system camera
-
-    # For intsense bokeh use
-    mkdir /data/vendor/camera/model 0777 system camera
-    mkdir /data/vendor/camera/model/dof_model 0777 system camera
-    mkdir /data/vendor/camera/model/rt_model 0777 system camera
-
-    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
-    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
-    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
-    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
-    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
-    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
-    copy /mnt/vendor/persist/camera/rear_dc_cal_wu.bin /data/vendor/camera/rear_dc_cal_wu.bin
-
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_cache
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_model
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_policy
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_cache
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_model
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_policy
-    chmod 0666 /data/vendor/camera/rear_dc_cal_wu.bin
-
-    # Mishow
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chmod 0777 /sys/class/power_supply/battery/input_suspend
-
-    # For mibokeh use
-    mkdir /data/vendor/camera/mibokeh 0776 system camera
-
-    # SMB
+#SMB
     chown system system /proc/smb/ScreenComm
     chmod 0660 /proc/smb/ScreenComm
 
-    # For battery charging off if CALL_STATE_OFFHOOK
     chmod 0660 /dev/spm
     chown system system /dev/spm
 
-    chown system system /sys/class/power_supply/battery/charging_call_state
-    chmod 0660 /sys/class/power_supply/battery/charging_call_state
+    # BSP:modify for LRA ADYLHBSLA-1 by jiangzhu.yang 20220715 start
+    chown system system /sys/class/leds/vibrator_single/activate
+    chown system system /sys/class/leds/vibrator_single/activate_mode
+    chown system system /sys/class/leds/vibrator_single/awrw
+    chown system system /sys/class/leds/vibrator_single/brightness
+    chown system system /sys/class/leds/vibrator_single/bullet_nr
+    chown system system /sys/class/leds/vibrator_single/cali
+    chown system system /sys/class/leds/vibrator_single/cont
+    chown system system /sys/class/leds/vibrator_single/cont_brk_time
+    chown system system /sys/class/leds/vibrator_single/cont_drv_lvl
+    chown system system /sys/class/leds/vibrator_single/cont_drv_time
+    chown system system /sys/class/leds/vibrator_single/cont_wait_num
+    chown system system /sys/class/leds/vibrator_single/duration
+    chown system system /sys/class/leds/vibrator_single/f0
+    chown system system /sys/class/leds/vibrator_single/f0_save
+    chown system system /sys/class/leds/vibrator_single/gain
+    chown system system /sys/class/leds/vibrator_single/gun_type
+    chown system system /sys/class/leds/vibrator_single/haptic_audio
+    chown system system /sys/class/leds/vibrator_single/haptic_audio_time
+    chown system system /sys/class/leds/vibrator_single/index
+    chown system system /sys/class/leds/vibrator_single/loop
+    chown system system /sys/class/leds/vibrator_single/lra_resistance
+    chown system system /sys/class/leds/vibrator_single/max_brightness
+    chown system system /sys/class/leds/vibrator_single/osc_cali
+    chown system system /sys/class/leds/vibrator_single/osc_save
+    chown system system /sys/class/leds/vibrator_single/prctmode
+    chown system system /sys/class/leds/vibrator_single/ram_num
+    chown system system /sys/class/leds/vibrator_single/ram_update
+    chown system system /sys/class/leds/vibrator_single/ram_vbat_comp
+    chown system system /sys/class/leds/vibrator_single/reg
+    chown system system /sys/class/leds/vibrator_single/rtp
+    chown system system /sys/class/leds/vibrator_single/seq
+    chown system system /sys/class/leds/vibrator_single/state
+    chown system system /sys/class/leds/vibrator_single/trig
+    chown system system /sys/class/leds/vibrator_single/trigger
+    chown system system /sys/class/leds/vibrator_single/uevent
+    chown system system /sys/class/leds/vibrator_single/vbat_monitor
+    # BSP:modify for LRA ADYLHBSLA-1 by jiangzhu.yang 20220715 end
 
-on boot
-    stop console
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
 
-# Touch
-on property:sys.tp.grip_enable=0
-    write /proc/nvt_edge_reject_switch 1
-on property:sys.tp.grip_enable=90
-    write /proc/nvt_edge_reject_switch 3
-on property:sys.tp.grip_enable=270
-    write /proc/nvt_edge_reject_switch 2
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+#widevine driver node
+    chmod 0660 /dev/drm_wv
+    chown media system /dev/drm_wv
+
+#SPD: modify cpuctl cpu.shares by yifei.liu at 20240327 start
+    write /dev/cpuctl/top-app/cpu.shares 5120
+    write /dev/cpuctl/foreground/cpu.shares 4196
+#SPD: modify cpuctl cpu.shares by yifei.liu at 20240327 end
+
+#BSP: add memfusion2.2 for LH7NUH89-10 by zenghui.li 20240322 start
+on property:sys.boot_completed=1 && property:persist.vendor.swapfile_enable=true && property:ro.vendor.memfusion2_2.support=true
+    swapon_all /vendor/etc/memfusion2/fstab.enableswap_wb
+#BSP: add memfusion2.2 for LH7NUH89-10 by zenghui.li 20240322 end

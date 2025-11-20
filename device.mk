@@ -130,7 +130,13 @@ PRODUCT_PACKAGES += \
     fstab.mt6833.vendor_ramdisk \
     fstab.emmc \
     fstab.emmc.vendor_ramdisk \
-    init.batterysecret.rc \
+    init.aee.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.insmod.mt6833.cfg \
+    init.insmod.sh \
+    init.mtkgki.rc \
+    multi_init.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6833.power.rc \

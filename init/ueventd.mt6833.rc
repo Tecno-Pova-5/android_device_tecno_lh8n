@@ -1,4 +1,4 @@
-# change partition permission
+#change partition permission
 # eMMC only
 /dev/block/mmcblk0                               0660    root    system
 /dev/block/mmcblk0boot0                          0660    root    system
@@ -11,25 +11,25 @@
 /dev/block/sdc                                   0660    root    system
 
 # eMMC/UFS common
-/dev/block/platform/bootdevice/by-name/misc2     0660    root    system
-/dev/block/platform/bootdevice/by-name/boot      0640    root    system
-/dev/block/platform/bootdevice/by-name/recovery  0640    root    system
-/dev/block/platform/bootdevice/by-name/secro     0640    root    system
-/dev/block/platform/bootdevice/by-name/seccfg    0660    root    system
-/dev/block/platform/bootdevice/by-name/proinfo   0660    root    system
-/dev/block/platform/bootdevice/by-name/nvram     0660    root    system
-/dev/block/platform/bootdevice/by-name/para      0660    root    system
-/dev/block/platform/bootdevice/by-name/logo      0660    root    system
-/dev/block/platform/bootdevice/by-name/frp       0660    root    system
-/dev/block/platform/bootdevice/by-name/md1img    0640    root    system
-/dev/block/platform/bootdevice/by-name/md1img_a  0640    root    system
-/dev/block/platform/bootdevice/by-name/md1img_b  0640    root    system
-/dev/block/platform/bootdevice/by-name/md1dsp    0660    root    system
-/dev/block/platform/bootdevice/by-name/boot_para 0640    root    system
+/dev/block/by-name/misc2     0660    root    system
+/dev/block/by-name/boot      0640    root    system
+/dev/block/by-name/recovery  0640    root    system
+/dev/block/by-name/secro     0640    root    system
+/dev/block/by-name/seccfg    0660    root    system
+/dev/block/by-name/proinfo   0660    root    system
+/dev/block/by-name/nvram     0660    root    system
+/dev/block/by-name/para      0660    root    system
+/dev/block/by-name/logo      0660    root    system
+/dev/block/by-name/frp       0660    root    system
+/dev/block/by-name/md1img    0640    root    system
+/dev/block/by-name/md1img_a  0640    root    system
+/dev/block/by-name/md1img_b  0640    root    system
+/dev/block/by-name/md1dsp    0660    root    system
+/dev/block/by-name/boot_para 0640    root    system
 
 # OTP
 /dev/otp                  0660   system     system
-/dev/block/platform/bootdevice/by-name/otp       0660    root    system
+/dev/block/by-name/otp       0660    root    system
 
 # Connectivity
 /dev/stpwmt               0660   system     system
@@ -58,7 +58,8 @@
 /dev/fw_log_wifi          0660   wifi     wifi
 
 # FMRadio
-/dev/fm                   0660   system     system
+# NFBD:modify  for dev/fm 0660->0666 NFRFP-5229 by xiaoyan.shi 20211125
+/dev/fm                   0666   media     media
 
 # NFC
 /dev/msr3110              0666   root       root
@@ -80,7 +81,7 @@
 /dev/mobicore             0600   system     system
 /dev/mobicore-user        0666   system     system
 /dev/t-base-tui           0666   system     system
-/dev/hardwareinfo         0660   root       system
+
 #v4l2 device
 /dev/video*      0660 camera system
 /dev/media*      0660 camera system
@@ -148,7 +149,7 @@
 /dev/ttyRB*               0660   radio      radio
 
 # Mali node
-/dev/mali                 0666   system     graphics
+/dev/mali*                0666   system     graphics
 
 # Change ION driver permission
 /dev/ion                  0666   system     graphics
@@ -186,9 +187,12 @@
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
 
+#BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211221 start
 #elliptic sensor
 /dev/elliptic0            0644   system     system
 /dev/elliptic1            0644   system     system
+#BSP: add ultrasound support CILHLJYQ-4 by yu.xiang5 20211221 end
 
-# Raw HID devices
-/dev/hidraw*              0660   system     system
+#widevine driver node
+/dev/drm_wv               0660   media      system
+
