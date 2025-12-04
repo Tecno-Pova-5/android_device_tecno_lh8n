@@ -98,7 +98,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # DTB
 PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/prebuilt/dtb.img:$(TARGET_OUT)/dtb.img
+    $(LOCAL_PATH)/prebuilt/dtb.img:$(TARGET_OUT)/dtb.img
 
 # FM Radio
 PRODUCT_PACKAGES += \
