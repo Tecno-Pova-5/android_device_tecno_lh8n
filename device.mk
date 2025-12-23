@@ -263,10 +263,22 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client 
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor
+
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.1.vendor
+
+# vndservice
+PRODUCT_PACKAGES += \
+   vndservicemanager \
+   vndservice
 
 # Vibrator
 $(call soong_config_set, vibrator, vibratortargets, vibratoraidlV2target)
