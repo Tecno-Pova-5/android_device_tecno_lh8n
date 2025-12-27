@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6833.rc \
     init.sensor_2_0.rc \
     init.stnfc.rc \
+	init.recovery.usb.rc \
     ueventd.mt6833.rc    
 
 # Keymaster
