@@ -123,7 +123,7 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "init.recovery.usb.rc",
-    src: "etc/init.recovery.usb.rc",
+    src: "init.recovery.usb.rc",
     recovery: true,
     sub_dir: "init"
 }
