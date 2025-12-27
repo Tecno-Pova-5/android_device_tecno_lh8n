@@ -134,3 +134,17 @@ prebuilt_etc {
     src: "ueventd.mt6833.rc",
     vendor: true,
 }
+
+prebuilt_firmware {
+    name: "ilitek_ts_fw_01.bin",
+    src: "firmware/ilitek_ts_fw_01.bin",
+    recovery: true,
+    sub_dir: "firmware",
+}
+
+prebuilt_firmware {
+    name: "focaltech_ts_fw_00.bin",
+    src: "firmware/ilitek_ts_fw_01.bin",
+    recovery: true,
+    sub_dir: "firmware",
+}

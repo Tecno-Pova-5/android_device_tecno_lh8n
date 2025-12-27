@@ -148,6 +148,11 @@ PRODUCT_PACKAGES += \
 	init.recovery.usb.rc \
     ueventd.mt6833.rc    
 
+# load touch firmware on recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/firmware/ilitek_ts_fw_01.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/ilitek_ts_fw_01.bin \
+    $(LOCAL_PATH)/init/firmware/focaltech_ts_fw_00.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/focaltech_ts_fw_00.bin
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml
